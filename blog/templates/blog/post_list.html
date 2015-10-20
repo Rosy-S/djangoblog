@@ -3,8 +3,14 @@
 		<title> OMG Django </title>
 	</head>
 	<body>
-	    <h1>Hi there!</h1>
-	    <p>I will fill in this part later </p>
+	    <h1><a href="/">Hi there!</a></h1>
+	    {% for post in posts %}
+	    <div>
+	    	<p>published: {{ post.published_date }}</p>
+	    	<h1><a href="">{{ post.title }}</a></h1>
+	    	<p>{{post.text|linebreaks }}</p>
+	    </div>
+	    {% endfor %}
 	   	<p> onwards... </p>
     </body>
 </html>
